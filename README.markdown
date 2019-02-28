@@ -15,6 +15,28 @@ rake db:migrate
 rails server
 ```
 
+OR
+
+Install [Docker](https://www.docker.com/products/docker-desktop).
+
+Then:
+
+```bash
+git clone git://github.com/JumpstartLab/blogger_advanced.git
+cd blogger_advanced
+docker-compose build
+docker-compose run web rake db:migrate db:create db:seed
+docker-compose up
+```
+
+At this point your server should be running allowing you to visit `localhost:3000`
+
+If you would like to use rails commands, preface them with `docker-compose run web`. For example:
+
+```bash
+docker-compose run web rails c
+```
+
 ## Branches
 
 There are some branches to show some functionality.
