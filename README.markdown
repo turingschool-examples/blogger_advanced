@@ -25,8 +25,13 @@ Then:
 git clone git://github.com/JumpstartLab/blogger_advanced.git
 cd blogger_advanced
 docker-compose build
-docker-compose run web rake db:migrate db:create db:seed
 docker-compose up
+```
+
+Then, in a separate terminal window:
+
+```
+docker-compose run web rake db:migrate db:create db:seed
 ```
 
 At this point your server should be running allowing you to visit `localhost:3000`
